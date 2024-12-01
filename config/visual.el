@@ -14,7 +14,6 @@
 ;; parens
 (show-paren-mode t)
 
-
 ;; line numbers & column number on modeline
 (global-display-line-numbers-mode 1)
 (column-number-mode t)
@@ -39,7 +38,6 @@
       (set-face-attribute 'default nil :height height :font font-name))))
 
 (set-my-font)
-
 
 ;; themes
 (defun my-load-theme (theme)

@@ -12,39 +12,40 @@
     (add-hook 'python-mode-hook #'eglot-ensure))
 
   (when (memq 'go programming-languages)
-	(message "configuring Go...")
+    (message "configuring Go...")
     (use-package
      go-ts-mode
      :after eglot
-	 :ensure t
+     :ensure t
      :mode "\\.go\\'"
      :hook (go-ts-mode . eglot-ensure)
      :config (setq go-ts-mode-indent-offset 4)))
 
   (when (memq 'ocaml programming-languages)
-	(message "configuring ocaml...")
-	(add-to-list 'load-path
-				 "/home/davids/.opam/default/share/emacs/site-lisp")
+    (message "configuring ocaml...")
+    (add-to-list
+     'load-path "/home/davids/.opam/default/share/emacs/site-lisp")
     (require 'ocp-indent)
-	(use-package tuareg
-	  :after eglot
-	  :ensure t
-	  :hook (tuareg-mode . eglot-ensure)))
+    (use-package
+     tuareg
+     :after eglot
+     :ensure t
+     :hook (tuareg-mode . eglot-ensure)))
 
 
   (when (memq 'rust programming-languages)
     (use-package
      rust-ts-mode
-	 :ensure t
+     :ensure t
      :after eglot
      :mode "\\.rs\\'"
      :hook (rust-ts-mode . eglot-ensure)))
 
   (when (memq 'elixir programming-languages)
     (use-package
-      elixir-ts-mode
-	  :ensure t
-	  :after eglot
+     elixir-ts-mode
+     :ensure t
+     :after eglot
      :config
      (add-to-list
       'eglot-server-programs
