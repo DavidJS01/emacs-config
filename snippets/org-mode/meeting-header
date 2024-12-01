@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Meeting Header
+# key: meeting
+# --
+* [`(format-time-string "%Y-%m-%d %I:%M %p")`] - ${1: $$(yas-choose-value '("Standup" "Sync" "Retro" "Interpersonal" "1:1"))}
+** =Attendees=
+   - $2
+** =Notes=
+   - $3
+** =Action Items=
+   - $4
+$0

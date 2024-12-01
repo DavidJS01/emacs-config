@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: action
+# key: act
+# --
+${1:Action description} :TODO:

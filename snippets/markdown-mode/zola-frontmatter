@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: zola-frontmatter
+# key: zola-frontmatter
+# --
++++
+title = $1
+date = `(format-time-string "%Y-%m-%d")`
+draft = ${2:false}
+
+[extra]
+summary = "Lorem Impsum Blah Blah Blah"
+
+[taxonomies]
+tags = ["tag1", "tag2"]
++++
